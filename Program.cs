@@ -11,10 +11,10 @@ namespace first_ef_project
             var context = new EFCoreDemoContext();
             DatabaseOperation dbo = new DatabaseOperation();
             dbo.insertDataIntoDb(context);
-            dbo.findDatafromDb("Rabindranath");
-
-            
-
+            dbo.findDatafromDb(context, "Rabindranath");
+            dbo.findAllDatafromDb(context);
+            dbo.amendDataIntoDb(context, "Rabindranath");
+            dbo.cancelDataIntoDb(context, "Rabindranath");
         }
     }
 }
